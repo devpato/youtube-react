@@ -1,10 +1,11 @@
 import React from 'react';
 import VideoItem from './VideoItem';
-const VideoList = ({videos}) => { //Functionla Component
+const VideoList = ({videos, onVideoSelect}) => { //Functionla Component
 
     const RENDERED_LIST = videos.map(video=>{
-        return <VideoItem video={video}/>
-    })
+        return <VideoItem onVideoSelect={onVideoSelect} video={video}/>
+    });
+    
     return <div className="ui relaxed divided list">{RENDERED_LIST}</div>
 }
 
