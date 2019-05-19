@@ -6,5 +6,9 @@
 
 
 .video-item img {
-    max-width: 280px;
+    width: 280px;
+}
+
+.video-item.item .content .header {
+    margin-left: 18px;
 }
