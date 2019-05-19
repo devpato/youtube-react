@@ -22,11 +22,11 @@ class App extends React.Component {
         })
 
        this.setState(
-                {
-                    videos: RESPONSE.data.items,
-                    selectedVideo: RESPONSE.data.items[0]
-                }
-           )
+            {
+                videos: RESPONSE.data.items,
+                selectedVideo: RESPONSE.data.items[0]
+            }
+        )
     }
 
     onVideoSelect=(video)=> {
