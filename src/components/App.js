@@ -10,19 +10,26 @@ class App extends React.Component {
         selectedVideo: null
     }
 
+    componentDidMount() {
+        this.onTermSubmit('');
+    }
+
     onTermSubmit= async(term)=>{
-        console.log(term);
         const RESPONSE = await youtube.get('/search', {
             params: {
                 q : term
             }
         })
 
-       this.setState({videos: RESPONSE.data.items})
+       this.setState(
+                {
+                    videos: RESPONSE.data.items,
+                    selectedVideo: RESPONSE.data.items[0]
+                }
+           )
     }
 
     onVideoSelect=(video)=> {
-        console.log('From the app.js', video);
         this.setState({selectedVideo : video})
     }
 
