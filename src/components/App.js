@@ -7,7 +7,7 @@ class App extends React.Component {
 
     state = {
         videos: [],
-        selectedVidoe: null
+        selectedVideo: null
     }
 
     onTermSubmit= async(term)=>{
@@ -23,6 +23,7 @@ class App extends React.Component {
 
     onVideoSelect=(video)=> {
         console.log('From the app.js', video);
+        this.setState({selectedVideo : video})
     }
 
     render() {
