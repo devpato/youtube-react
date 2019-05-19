@@ -5,7 +5,7 @@ const VideoList = ({videos}) => { //Functionla Component
     const RENDERED_LIST = videos.map(video=>{
         return <VideoItem video={video}/>
     })
-    return <div>{RENDERED_LIST}</div>
+    return <div className="ui relaxed divided list">{RENDERED_LIST}</div>
 }
 
 export default VideoList;
