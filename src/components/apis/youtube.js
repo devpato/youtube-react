@@ -1,4 +1,4 @@
-import Axios from "axios";
+import axios from "axios";
 
 const KEY = 'AIzaSyCHITA0aj4hs02BhwJLS6eQ68GnZ2VDK_U';
 
